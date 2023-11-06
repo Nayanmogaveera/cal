@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)file:///C:/Users/nayan/Downloads/simple%20calculator.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+   <style>
+    .container{
+    width:100%;
+    height:100vh;
+    background: fixed;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.calculator{
+    background: grey;
+    padding:20px;
+    border-radius: 10px;
+}
+.calculator form input{
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px rgba(255,255,255,0.1),5px 5px 15px rgba(0,0,0,0.2);
+    font-size: 20px;
+    color:black;
+    cursor:pointer;
+    margin: 10px;
+}
+form  .display{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+form  .display input{
+    text-align: right;
+    flex: 1;
+    font-size: 35px;
+    box-shadow: none;
+}
+form input.equal{
+    width: 145px;
+}
+
+   </style> 
+    
+    
+    </head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <h1 align="center">CASIO</h1>
+                <div class="display">
+                <input type="text" name="display">
+                </div>
+                <div>
+                    <input type="button" value="AC" onclick="display.value = &#39;&#39; ">
+                    <input type="button" value="DEL" onclick="display.value = display.value.toString().slice(0,-1)">
+                    <input type="button" value="." onclick="display.value += &#39;.&#39; ">
+                    <input type="button" value="/" onclick="display.value += &#39;/&#39; ">
+                    </div>
+                    <div>
+                        <input type="button" value="7" onclick="display.value += &#39;7&#39; ">
+                        <input type="button" value="8" onclick="display.value += &#39;8&#39; ">
+                        <input type="button" value="9" onclick="display.value += &#39;9&#39; ">
+                        <input type="button" value="*" onclick="display.value += &#39;*&#39; ">
+                    </div>
+                    <div>
+                        <input type="button" value="4" onclick="display.value += &#39;4&#39; ">
+                        <input type="button" value="5" onclick="display.value += &#39;5&#39; ">
+                        <input type="button" value="6" onclick="display.value += &#39;6&#39; ">
+                        <input type="button" value="-" onclick="display.value += &#39;-&#39; ">
+                    </div>
+                    <div>
+                        <input type="button" value="1" onclick="display.value += &#39;1&#39; ">
+                        <input type="button" value="2" onclick="display.value += &#39;2&#39; ">
+                        <input type="button" value="3" onclick="display.value += &#39;3&#39; ">
+                        <input type="button" value="+" onclick="display.value += &#39;+&#39; ">
+                    </div>
+                    <div>
+                        <input type="button" value="00" onclick="display.value += &#39;00&#39; ">
+                        <input type="button" value="0" onclick="display.value += &#39;0&#39; ">
+                        <input type="button" value="=" onclick="display.value = eval(display.value)" class="equal">
+                    </div>
+        
+                </form>
+            </div>
+        </div>
+
+</body></html>
